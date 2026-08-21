@@ -1,0 +1,42 @@
+name: anyrouter-probe
+
+on:
+  schedule:
+    # 整点后 0-59 分钟内随机：GitHub cron 不支持真随机，
+    # 用本 workflow 内的随机 sleep 实现"每小时随机时刻"
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Random wait (0-55 min)
+        run: |
+          sleep $((RANDOM % 3300))
+          echo "probe time: $(date '+%F %T')"
+
+      - name: Run probe
+        env:
+          ANYROUTER_KEY: ${{ secrets.ANYROUTER_KEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: node probe.mjs
+
+      - name: Commit log
+        run: |
+          git config user.name "anyrouter-probe-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "no changes" || git commit -m "probe: $(date '+%F %T')"
+          git push
