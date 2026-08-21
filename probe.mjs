@@ -15,6 +15,12 @@ const now = () => {
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
 };
 
+// 手动测试模式: SEND_TEST=1 时发一条 UTF-8 测试消息并退出
+if (process.env.SEND_TEST === '1') {
+  await tgNotify('✅ TG 通道测试（来自 GitHub Actions runner，UTF-8 编码）\n如果这条显示正常，通知链路就绪 🎯');
+  process.exit(0);
+}
+
 function log(line) {
   const entry = `[${now()}] ${line}`;
   console.log(entry);

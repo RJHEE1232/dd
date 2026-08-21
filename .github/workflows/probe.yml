@@ -11,6 +11,10 @@ on:
         description: '跳过随机等待（手动测试用）'
         type: boolean
         default: true
+      send_test:
+        description: '发送 TG 测试消息（验证通知链路）'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -41,6 +45,7 @@ jobs:
           ANYROUTER_KEY: ${{ secrets.ANYROUTER_KEY }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          SEND_TEST: ${{ inputs.send_test && '1' || '0' }}
         run: node probe.mjs
 
       - name: Commit log
