@@ -6,6 +6,11 @@ on:
     # 用本 workflow 内的随机 sleep 实现"每小时随机时刻"
     - cron: '0 * * * *'
   workflow_dispatch:
+    inputs:
+      skip_wait:
+        description: '跳过随机等待（手动测试用）'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -21,7 +26,8 @@ jobs:
         with:
           node-version: 22
 
-      - name: Random wait (0-55 min)
+      - name: Random wait (0-55 min, skipped if manual)
+        if: ${{ !inputs.skip_wait }}
         run: |
           sleep $((RANDOM % 3300))
           echo "probe time: $(date '+%F %T')"
