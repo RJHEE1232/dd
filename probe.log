@@ -300,3 +300,5 @@
 [2026-09-04 09:01:09] gpt   gpt-5.6-sol     -> [✘] HTTP 400: {"error":{"message":"invalid codex request (request id: 20260904170109648183250GZQtlhs3)","type":"new_api_error","param":"","code":"invalid_responses_request"}}
 [2026-09-04 14:04:33] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
 [2026-09-04 14:04:34] gpt   gpt-5.6-sol     -> [✘] HTTP 400: {"error":{"message":"invalid codex request (request id: 2026090422043457183131LdWIcBMS)","type":"new_api_error","param":"","code":"invalid_responses_request"}}
+[2026-09-04 17:43:32] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
+[2026-09-04 17:43:33] gpt   gpt-5.6-sol     -> [✘] HTTP 400: {"error":{"message":"invalid codex request (request id: 20260905014333259601765C47B7O4V)","type":"new_api_error","param":"","code":"invalid_responses_request"}}
