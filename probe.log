@@ -312,3 +312,5 @@
 [2026-09-05 05:44:42] gpt   gpt-5.6-sol     -> [✘] HTTP 400: {"error":{"message":"invalid codex request (request id: 20260905134442399159658sK0OzMte)","type":"new_api_error","param":"","code":"invalid_responses_request"}}
 [2026-09-05 10:42:00] claude claude-fable-5 -> [✘] HTTP 502: 
 [2026-09-05 10:42:04] gpt   gpt-5.6-sol     -> [✘] HTTP 502: 
+[2026-09-05 13:52:24] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
+[2026-09-05 13:52:25] gpt   gpt-5.6-sol     -> [✘] HTTP 500: {"error":{"message":"当前模型 gpt-5.6-sol 负载已经达到上限，请稍后重试 (request id: 202609052152249220885439GRyarD7)","type":"new_api_error","param":"","code":"get_channel_failed"}}
