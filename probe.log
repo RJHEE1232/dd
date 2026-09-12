@@ -402,3 +402,5 @@
 [2026-09-12 04:48:44] gpt   gpt-5.6-sol     -> [✘] HTTP 500: {"error":{"message":"当前模型 gpt-5.6-sol 负载已经达到上限，请稍后重试 (request id: 20260912124844135392358rbntj48Z)","type":"new_api_error","param":"","code":"get_channel_failed"}}
 [2026-09-12 09:53:30] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
 [2026-09-12 09:53:31] gpt   gpt-5.6-sol     -> [✘] HTTP 500: {"error":{"message":"当前模型 gpt-5.6-sol 负载已经达到上限，请稍后重试 (request id: 2026091217533151342248XV3d92vA)","type":"new_api_error","param":"","code":"get_channel_failed"}}
+[2026-09-12 13:48:27] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
+[2026-09-12 13:48:28] gpt   gpt-5.6-sol     -> [✘] HTTP 500: {"error":{"message":"当前模型 gpt-5.6-sol 负载已经达到上限，请稍后重试 (request id: 20260912214828268596462kT04veU0)","type":"new_api_error","param":"","code":"get_channel_failed"}}
