@@ -866,3 +866,5 @@
 [2026-10-27 14:38:30] gpt   gpt-5.6-sol     -> [✘] HTTP 404: {"error":"当前 API 不支持所选模型 gpt-5.6-sol","type":"error"}
 [2026-10-27 20:20:44] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
 [2026-10-27 20:20:45] gpt   gpt-5.6-sol     -> [✘] HTTP 404: {"error":"当前 API 不支持所选模型 gpt-5.6-sol","type":"error"}
+[2026-10-27 23:53:48] claude claude-fable-5 -> [✘] HTTP 503: {"error":{"message":"Service Unavailable","type":"error"},"type":"error"}
+[2026-10-27 23:53:49] gpt   gpt-5.6-sol     -> [✘] HTTP 404: {"error":"当前 API 不支持所选模型 gpt-5.6-sol","type":"error"}
